@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+ 
+        
+        <div class="row">
+    {% for ex in bl %}  
+        {% if forloop.counter0|divisibleby:3 %}
+              </div><br><div class="row">
+        {% endif %}
+        <div class="col-4">
+        <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{ ex.Image.url }}" width="200" height="200" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"> {{ ex.name }}</h5>
+                  <p class="card-text">
+                      
+                         {{ ex.email }}</p>
+                   
+                </div>
+              </div>
+        </div>
+    
+    {% endfor %}  
+    </div>
+    
+{% endblock %}

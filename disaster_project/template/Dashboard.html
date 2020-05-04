@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/icofont.min.css' %}">
+	<style type="text/css">
+		.home:hover{
+			color: #1daccb;
+		}
+		.home{color: white;}
+		.bg{background-size: cover;
+		background-repeat: no-repeat;
+		background-image: url(pics/sub-header.jpg);}
+		.hv{background-color: black; color: white;}
+		.hv:hover{background-color: #1daccb; }
+	</style>
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row bg-dark text-white">
+			<div class="col-md-1"></div>
+			<div class="col-md-3 pt-2 pb-2"><i class="icofont-pin"></i> Ranjit-Avenue, Amritsar </div>
+			<div class="col-md-3 pt-2 pb-2"><i class="icofont-phone"></i> Contact Us (+91) 90876 54289</div>
+			<div class="col-md-2"></div>
+			<div class="col-md-2 pt-2 pb-2 text-center" style="background-color:#1daccb"> <a  href="Login.html" style="color: white; text-decoration: none;">Sign In &nbsp; &nbsp;&nbsp; &nbsp; Sign Up</a></div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-light bg-white pt-4 pb-4">
+ 			<a class="navbar-brand" href="#">
+  			<img src="{%static 'pics/charity-logo.png' %}"> <span style="color: #1daccb"><b>Disaster</b></span>
+ 			<b>Help</b> </a>
+  			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav ml-auto pr-5">
+      				<li class="nav-item active">
+       					<a class="nav-link" href="Home.html">Home</a>
+      				</li>
+      				<li class="nav-item active">
+        				<a class="nav-link" href="AboutUs.html">AboutUs</a>
+      				</li>
+     				<li class="nav-item active">
+        				<a class="nav-link" href="#">Blogs</a>
+     				</li>
+      				<li class="nav-item active">
+        				<a class="nav-link" href="organization.html">Organization</a>
+      				</li>
+      				
+      				<li class="nav-item active">
+       					<a class="nav-link " href="#">Types</a>
+     				</li>
+     				<li class="nav-item active">
+        				<a class="nav-link" href="Contact.html">ContactUs</a>
+      				</li>
+    			</ul>
+ 			</div>
+        </nav>
+        {% block content %}
+        {% endblock %}
+        <div class="container-fluid text-white bg-dark">
+            <div class="row">
+                <div class="col-md-12 text-center pt-4">
+                    <a href="" >
+                        <img src="{%static 'pics/ft-logo.png' %}" alt="" />
+                    </a>
+                </div></div>
+                <p style="padding: 30px; text-align: center;">
+                    ReliefWeb’s teams work around the clock to provide reliable and timely information,<br> enabling humanitarian workers to make informed decisions and to plan effective response.
+                </p>
+            
+            <div class="row" style="padding:20px;">
+                <div class="col-md-6 col-sm-6 " >
+                    <div class="widget kode-widget list-style-1">
+                        <h4 class="widget-title">Quick Links</h4><br>
+                        <div class="clear"></div>
+                        <div class="menu-menu-2-container">
+                                <p style="border-bottom: 1px solid white"></p>
+                                <p style="border-bottom: 1px solid white;padding-bottom: 4px;">
+                                    <a href="Home.html" style="color: white; text-decoration: none;">>&nbsp;&nbsp;Home</a>
+                                </p>
+    
+                                <p style="border-bottom: 1px solid white;padding-bottom: 5px;">
+                                    <a href="" style="color: white; text-decoration: none;">>&nbsp;&nbsp; Latest News</a>
+                                </p>
+                                <p style="border-bottom: 1px solid white;padding-bottom: 4px;">
+                                    <a href="" style="color: white; text-decoration: none;">>&nbsp;&nbsp;Our Work</a>
+                                </p>
+                                <p style="border-bottom: 1px solid white;padding-bottom: 4px;">
+                                    <a href="" style="color: white; text-decoration: none;">>&nbsp;&nbsp;Careers</a>
+                                </p>
+                                <p style="border-bottom: 1px solid white;padding-bottom: 4px;">
+                                    <a href="" style="color: white; text-decoration: none;">>&nbsp;&nbsp;Who We Are</a>
+                                </p>
+                                <p style="border-bottom: 1px solid white;padding-bottom: 4px;">
+                                    <a href="" style="color: white; text-decoration: none;">>&nbsp;&nbsp;Shop</a>
+                                </p>
+                                <p>
+                                    <a href="Contact.html" style="color: white; text-decoration: none;">>&nbsp;&nbsp;Contact Us</a>
+                                </p>
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div>
+                        <div class="widget" style="padding-left: 60px;">
+                            <h4 class="widget-title">Recent Post</h4><br>
+                            <div class="clear"></div>
+                            <div class="widget-recentpost">
+                                <div>
+                                    <figure>
+                                        <img src="pics/foo1.jpg" alt="" width="60" height="60" />
+                                        <a class="icon-box" href=""></a>
+                                    </figure>
+                                    <div class="text-overflow">
+                                        <h6><a href=""></a></h6>
+                                        <em >11 Apr 2017</em>
+                                    </div>
+                                </div>
+                                <div class="d-relf-recentpost">
+                                    <figure>
+                                        <img src="pics/foo2.jpg" alt="" width="60" height="60" />
+                                        <a class="icon-box" href=""></a>
+                                    </figure>
+                                    <div class="text-overflow">
+                                        <h6><a href=""></a></h6>
+                                        <em class="kf_date">11 Apr 2017</em>
+                                    </div>
+                                </div>
+                                <div class="d-relf-recentpost">
+                                    <figure>
+                                        <img src="pics/foo3.jpg" alt="" width="60" height="60" />
+                                        <a class="icon-box" href=""></a>
+                                    </figure>
+                                    <div class="text-overflow">
+                                        <h6><a href=""></a></h6>
+                                        <em class="kf_date">11 Apr 2017</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="text-white container-fluid"  style="background-color:rgba(29,172,203,0.85); ">
+            <div class="container pt-2 pb-2">
+                <p>Copyright © 2020 DisasterRelief. All Right Reserved</p>
+            </div>
+        </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+        </div>
+       
+    </body>
+    </html>
