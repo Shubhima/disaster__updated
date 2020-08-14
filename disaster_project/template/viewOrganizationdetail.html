@@ -1,0 +1,44 @@
+{% extends 'Dashboard.html' %}
+{% block content %}
+<div class="row bg-dark pt-2 text-white">
+    <div class="col-md-12 text-right">
+        <p class="pr-4"><a class="home" href="{% url 'Organization'%}">Organization</a> &nbsp;> &nbsp;
+        <b>Details</b></p>
+    </div>		
+</div>
+<div class="row">
+    <div class="col-md-12 bg px-0">
+        <div class="text-white"  style="height: 200px;background-color:rgba(29,172,203,0.85); padding: 80px 30px; font-family: Montserrat">
+            <h1><b> Organization</b> </h1>
+            <p> You can see the Organization details here. </p>
+        </div>
+    </div>
+
+</div>
+<div class="row pt-2" >
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <img class="card-img-top" src="{{ o.Image.url }}" width="100" height="200" alt="Card image cap">
+                <h5 class="card-title"> <b>{{ o.Name}}</b></h5>
+                <p class="card-text" align=justify><br>
+                    {{ o.Contact_Info}}<br>
+                   
+                    {{ o.Desc}}<br>
+                    
+                </p>
+               
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+{% endblock %}

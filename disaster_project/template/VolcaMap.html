@@ -1,0 +1,56 @@
+{% extends 'Base.html' %}
+{% block content %}
+{% load static %}
+<div class="content-inner ">
+    <!-- Page Header-->
+   
+        <div class="container-fluid pt-4">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 " >
+                    <h1 class="text-center" style="text-shadow: 10px 20px 5px #ccc; font-size: 50px;color:#1daccb;">
+                      Volcanoes
+                    </h1>
+                </div>
+                <div class="col-md-2"></div>
+            </div><br>
+            <div class="col-md-12">
+                <form action="" method="POST">
+                    {% csrf_token %}
+               <div class="div-1 d-flex justify-content-center"> 
+                   <label class="heading-text mr-4" style="font-family: Sofia; font-size: 40px;color:black;">Enter Magnitude:</label>
+
+                   <input class="" type="number" placeholder="(6-8)" name="mag" max="8" min="6" style="height: 40px;
+                   margin-top: 10px;border-style: solid; border-radius: 20px;border-color: #1daccb; font-size: 20px;"/> </div>
+                    <div class="div-1 d-flex justify-content-center" >
+                       <button type="submit" value="Post" name="btn" style="height: 45px;margin-top: 10px;border-style: solid; border-radius: 20px;background-color:#1daccb;color:#fff"class="btn rounded-pill" > &nbsp;&nbsp;&nbsp;Enter &nbsp;&nbsp;&nbsp;</button>
+                       </div>
+                           </form>
+                       </div>
+                       <div class=" col-md-12 heading-text mr-4" style="font-family: Sofia; font-size:40px;color:black;">
+                           Description:      
+                        </div>
+                        <div class="col-md-12">
+                            <p align=justify>
+                                Prediction of volcanic eruption, or volcanic eruption forecasting, is an interdisciplinary monitoring and research effort to predict the time and severity of a volcano's eruption. Of particular importance is the
+                                 prediction of hazardous eruptions that could lead to catastrophic loss of life, property, and disruption of human activities.
+                              </p>
+                              <p align=justify>
+                                Patterns of seismicity are complex and often difficult to interpret; however, increasing seismic activity is a good indicator of increasing eruption risk, especially if long-period events become dominant and
+                                 episodes of harmonic tremor appear. </p>
+                                 <p align=justify>Using a similar method, researchers can detect volcanic eruptions by monitoring infra-sound—sub-audible sound below 20 Hz. The IMS Global Infrasound Network, originally set up to verify 
+                                     compliance with nuclear test ban treaties, has 60 stations around the world that work to detect and locate erupting volcanoes.</p>
+                            </div>
+                        <div class="col-md-12 mr-4" style="font-size:20px;">
+                            You can download dataset from here: 
+                            <a href="{%static 'Volcanic.csv'%}" class="homee" style="font-size:23px;"> Dataset <i class="icofont-download"></i></a>
+                        </div>
+                </div>
+          
+        </div>
+        <!-- JavaScript files-->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="sidebar/front.js"></script>
+        
+        {% endblock %}          

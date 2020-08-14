@@ -1,0 +1,57 @@
+{% extends 'Base.html' %}
+{% block content %}
+{% load static %}
+<div class="content-inner ">
+    <!-- Page Header-->
+   
+        <div class="container-fluid pt-4">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 " >
+                    <h1 class="text-center" style="text-shadow: 10px 20px 5px #ccc; font-size: 50px;color:#1daccb;">
+                      Minimum global loss as a Share Of GDP 
+                    </h1>
+                </div>
+                <div class="col-md-2"></div>
+            </div><br>
+            <div class="col-md-12">
+                <form action="" method="POST">
+                    {% csrf_token %}
+               <div class="div-1 d-flex justify-content-center"> 
+                   <label class="heading-text mr-4" style="font-family: Sofia; font-size: 40px;color:black;">Enter year:</label>
+                <input class="" type="number" placeholder="(1990-2017)" name="txt" max="2017" min="1990" style="height: 40px;width: 130px;
+                margin-top: 10px;border-style: solid; border-radius: 20px;border-color: #1daccb; font-size: 20px;"/> </div>
+                 <div class="div-1 d-flex justify-content-center" >
+                    <button type="submit" value="Post" name="btn" style="height: 45px;margin-top: 10px;border-style: solid; border-radius: 20px;background-color:#1daccb;color:#fff"class="btn rounded-pill" > &nbsp;&nbsp;&nbsp;Enter &nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                        </form>
+                    </div>
+                    <div class=" col-md-12 heading-text mr-4" style="font-family: Sofia; font-size:40px;color:black;">
+                        Description:
+                        
+                        </div>
+                        <div class="col-md-12">
+                            <p align=justify>
+                                Natural disasters not only have devastating impacts in terms of the loss of human life, but can also cause severe destruction with economic costs.
+                                When we look at global economic costs over time in absolute terms we tend to see rising costs. But, importantly, the world – and most countries – 
+                                have also gotten richer. Global gross domestic product has increased more than four-fold since 1970. We might therefore expect that for any given 
+                                disaster, the absolute economic costs could be higher than in the past.
+                              </p>
+                              <p align=justify>
+                                In the visualization shown here we see global direct disaster losses given as a share of GDP. There is notable year-to-year variability in costs – 
+                                ranging from 0.15% to 0.5% of global GDP. In recent decades there has been no clear trending increase in damages when we take account of 
+                                economic growth over this period. </p>
+                            </div>
+                        <div class="col-md-12 mr-4" style="font-size:20px;">
+                            You can download dataset from here: 
+                            <a href="{%static 'global-disaster-losses-gdp-share.csv'%}" class="homee" style="font-size:23px;"> Dataset <i class="icofont-download"></i></a>
+                        </div>
+                </div>
+          
+        </div>
+        <!-- JavaScript files-->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="sidebar/front.js"></script>
+        
+        {% endblock %}

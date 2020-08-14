@@ -1,0 +1,53 @@
+{% extends 'Base.html' %}
+{% block content %}
+{% load static %}
+<div class="content-inner ">
+    <!-- Page Header-->
+   
+        <div class="container-fluid pt-4">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 " >
+                    <h1 class="text-center" style="text-shadow: 10px 20px 5px #ccc; font-size: 50px;color:#1daccb;">
+                      Maximum disaster Loss as a Share Of GDP 
+                    </h1>
+                </div>
+                <div class="col-md-2"></div>
+            </div><br>
+            <div class="col-md-12">
+                <form action="" method="POST">
+                    {% csrf_token %}
+               <div class="div-1 d-flex justify-content-center"> 
+                   <label class="heading-text mr-4" style="font-family: Sofia; font-size: 40px;color:black;">Enter year:</label>
+                <input class="" type="number" placeholder="(2005-2018)" name="txt" max="2018" min="2005" style="height: 40px; width: 130px;
+                margin-top: 10px;border-style: solid; border-radius: 20px;border-color: #1daccb; font-size: 20px;"/> </div>
+                 <div class="div-1 d-flex justify-content-center" >
+                    <button type="submit" value="Post" name="btn" style="height: 45px;margin-top: 10px;border-style: solid; border-radius: 20px;background-color:#1daccb;color:#fff"class="btn rounded-pill" > &nbsp;&nbsp;&nbsp;Enter &nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                        </form>
+                    </div>
+                    <div class=" col-md-12 heading-text mr-4" style="font-family: Sofia; font-size:40px;color:black;">
+                        Description:
+                        
+                        </div>
+                        <div class="col-md-12">
+                            <p align=justify>
+                                In 1998-2017 disaster-hit countries also reported direct economic losses valued at US$ 2,908 billion1 , of which climate-related disasters caused US$ 2,245 billion or 77% of the total. This is up from 68% (US$ 895 billion) of losses
+                                 (US$ 1,313 billion) reported between 1978 and 1997. Overall, reported losses from extreme weather events rose by 251% between these two 20-year periods. 
+                              </p>
+                              <p align=justify>
+                                Overall, reported losses from extreme weather events rose by 251% between these two 20-year periods. </p>
+                            </div>
+                        <div class="col-md-12 mr-4" style="font-size:20px;">
+                            You can download dataset from here: 
+                            <a href="{%static 'direct-disaster-loss-as-a-share-of-gdp.csv'%}" class="homee" style="font-size:23px;"> Dataset <i class="icofont-download"></i></a>
+                        </div>
+                </div>
+          
+        </div>
+        <!-- JavaScript files-->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="sidebar/front.js"></script>
+        
+        {% endblock %}

@@ -1,0 +1,43 @@
+
+            {% extends 'Base.html' %}
+            {% block content %}
+            {% load static %}
+            <div class="content-inner ">
+                <!-- Page Header-->
+            
+                  <div class="container">
+                        <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8  pt-3" >
+                <h1 class="text-center" style="text-shadow: 10px 20px 5px #ccc; font-size: 50px;color:#1daccb;">
+                  Internally displaced persons</h1>
+                    <p class="text-center pt-3 description" style="font-size: 23px; font-family: 'inherit' ; font-style: italic;"> Make your own visualizations here. </p></div>
+            
+                      </div>
+                      <div></div>
+               </div>
+               <div class="col-md-8 pt-4 ml-4">
+                                <ul style=" font-size: 26px;color:black;">
+                                  <a  href="{% url 'InternalCount'%}" style="text-decoration: none; color: black;"><li class="homee"> Enter country to find internally displaced persons percentage.</li></a>
+                                  <a  href="{% url 'YearInternalDis'%}" style="text-decoration: none; color: black;">  <li class="homee">Enter year and country to find internally displaced persons percentage.</li></a>
+                                  <a  href="{% url 'twoInternalDis'%}" style="text-decoration: none; color: black;"><li class="homee">Comparison of two countries displaced persons in particular year.</li>
+                                  <a  href="{% url 'MaxInter'%}" style="text-decoration: none; color: black;"><li class="homee">Maximum displaced persons in particular year.</li>
+                                  <a  href="{% url 'MinInter'%}" style="text-decoration: none; color: black;"><li class="homee">Minimum displaced persons in particular year.</li>
+                                  <a  href="{% url 'Top5Inter'%}" style="text-decoration: none; color: black;"><li class="homee">Top5 displaced persons in particular year.</li>
+                                   
+                                </ul></div>
+                              </div>
+                             
+                          
+                            
+            
+                
+            <!-- JavaScript files-->
+            <script src="../js/jquery-3.4.1.min.js"></script>
+            <script src="../js/bootstrap.bundle.min.js"></script>
+            <script src="sidebar/front.js"></script>
+            
+            {% endblock %}
+                     
+                      
+                  

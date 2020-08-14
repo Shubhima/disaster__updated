@@ -1,0 +1,60 @@
+{% extends 'Base.html' %}
+{% block content %}
+{% load static %}
+<div class="content-inner ">
+    <!-- Page Header-->
+   
+        <div class="container-fluid pt-4">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 " >
+                    <h1 class="text-center" style="text-shadow: 10px 20px 5px #ccc; font-size: 50px;color:#1daccb;">
+                      Maximum deaths from Natural Disasters 
+                    </h1>
+                </div>
+                <div class="col-md-2"></div>
+            </div><br>
+            <div class="col-md-12">
+                <form action="" method="POST">
+                    {% csrf_token %}
+               <div class="div-1 d-flex justify-content-center"> 
+                   <label class="heading-text mr-4" style="font-family: Sofia; font-size: 40px;color:black;">Enter year:</label>
+                <input class="" type="number" placeholder="(1991-2017)" name="txt" max="2017" min="1991" style="height: 40px; width: 130px;
+                margin-top: 10px;border-style: solid; border-radius: 20px;border-color: #1daccb; font-size: 20px;"/> </div>
+                 <div class="div-1 d-flex justify-content-center" >
+                    <button type="submit" value="Post" name="btn" style="height: 45px;margin-top: 10px;border-style: solid; border-radius: 20px;background-color:#1daccb;color:#fff"class="btn rounded-pill" > &nbsp;&nbsp;&nbsp;Enter &nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                        </form>
+                    </div>
+                    <div class=" col-md-12 heading-text mr-4" style="font-family: Sofia; font-size:40px;color:black;">
+                        Description:
+                        
+                        </div>
+                        <div class="col-md-12">
+                            <p align=justify>
+                                The number of deaths from natural disasters can be highly variable from year-to-year; some years pass with very few deaths before a large
+                                 disaster event claims many lives. If we look at the average over the past decade, approximately 60,000 people globally died from natural 
+                                 disasters each year. This represents 0.1% of global deaths.
+                              </p>
+                              <p align=justify>
+                                In the visualizations shown here we see the annual variability in the number and share of deaths from natural disasters in recent decades.</p>
+                                <p align=justify>
+                                    What we see is that in many years, the number of deaths can be very low – often less than 10,000, and accounting for as low as 0.01% 
+                                    of total deaths. But we also see the devastating impact of shock events: the 1983-85 famine and drought in Ethiopia; the 2004 Indian 
+                                    Ocean earthquake and tsunami; Cyclone Nargis which struck Myanmar in 2008; and the 2010 Port-au-Prince earthquake in Haiti. All of 
+                                    these events pushed global disasters deaths over 200,000 – more than 0.4% of deaths in these years.
+                                </p>
+                            </div>
+                        <div class="col-md-12 mr-4" style="font-size:20px;">
+                            You can download dataset from here: 
+                            <a href="{%static 'deaths-natural-disasters-ihme.csv'%}" class="homee" style="font-size:23px;"> Dataset <i class="icofont-download"></i></a>
+                        </div>
+                </div>
+          
+        </div>
+        <!-- JavaScript files-->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="sidebar/front.js"></script>
+        
+        {% endblock %}

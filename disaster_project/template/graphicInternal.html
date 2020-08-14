@@ -1,0 +1,39 @@
+{% extends 'Base.html' %}
+{% block content %}
+{% load static %}
+<div class="content-inner ">
+    <!-- Page Header-->
+    
+      <div class="container-fluid pt-3">
+        <div class="row">
+          
+            <div class="col-md-2"></div>
+            <div class="col-md-8  " >
+                <h1 class="text-center" style="text-shadow: 10px 20px 5px #ccc; font-size: 50px;color:#1daccb;">
+                    Internally displaced persons
+                </h1>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+                <div class="col-md-12 text-center pt-5">
+                   
+                    <img style=" height: 400px;  width:600px; "  src="data:image/png;base64,{{graphicInternal|safe}}" >
+                    
+                </div>
+          
+          
+        </div>
+      </div>
+  
+
+  </div>
+</div>
+</div>
+
+    
+<!-- JavaScript files-->
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="sidebar/front.js"></script>
+
+{% endblock %}

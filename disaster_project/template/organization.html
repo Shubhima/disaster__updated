@@ -1,20 +1,22 @@
-{% extends 'base.html' %}
+{% extends 'Dashboard.html' %}
 {% block content %}
  
-        
+
         <div class="row">
     {% for ex in o %}  
         {% if forloop.counter0|divisibleby:3 %}
-              </div><br><div class="row">
+              </div><br><div class="row" style="margin-left: 6%;">
         {% endif %}
         <div class="col-4">
         <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="{{ ex.Image.url }}" width="200" height="200" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title"> {{ ex.name }}</h5>
+                  <h5 class="card-title"> {{ ex.Name }}</h5>
                   <p class="card-text">
                       
-                         {{ ex.email }}</p>
+                    {{ ex.email }}</p>
+                         
+                         <a href="{% url 'viewOrganizationdetail' id=ex.id %}">Read more</a> 
                    
                 </div>
               </div>

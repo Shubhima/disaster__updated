@@ -1,0 +1,58 @@
+{% extends 'Base.html' %}
+{% block content %}
+{% load static %}
+<div class="content-inner ">
+    <!-- Page Header-->
+   
+        <div class="container-fluid pt-4">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 " >
+                    <h1 class="text-center" style="text-shadow: 10px 20px 5px #ccc; font-size: 50px;color:#1daccb;">
+                      Maximum internally displaced persons
+                    </h1>
+                </div>
+                <div class="col-md-2"></div>
+            </div><br>
+            <div class="col-md-12">
+                <form action="" method="POST">
+                    {% csrf_token %}
+               <div class="div-1 d-flex justify-content-center"> 
+                   <label class="heading-text mr-4" style="font-family: Sofia; font-size: 40px;color:black;">Enter year:</label>
+                <input class="" type="number" placeholder="(2008-2017)" name="txt" max="2017" min="2008" style="height: 40px; width: 130px;
+                margin-top: 10px;border-style: solid; border-radius: 20px;border-color: #1daccb; font-size: 20px;"/> </div>
+                 <div class="div-1 d-flex justify-content-center" >
+                    <button type="submit" value="Post" name="btn" style="height: 45px;margin-top: 10px;border-style: solid; border-radius: 20px;background-color:#1daccb;color:#fff"class="btn rounded-pill" > &nbsp;&nbsp;&nbsp;Enter &nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                        </form>
+                    </div>
+                    <div class=" col-md-12 heading-text mr-4" style="font-family: Sofia; font-size:40px;color:black;">
+                        Description:
+                
+                </div>
+                <div class="col-md-12">
+                  <p align=justify>
+                    An internally displaced person (IDP) is someone who is forced to flee his or her home but who
+                     remains within his or her country's borders. They are often referred to as refugees, although 
+                     they do not fall within the legal definitions of a refugee.
+                  </p>
+                  <p align=justify>
+                    At the end of 2014, it was estimated there were 38.2 million IDPs worldwide, the highest level since
+                     1989, the first year for which global statistics on IDPs are available. The countries with the largest 
+                     IDP populations were Syria (7.6 million), Colombia (6 million), Iraq (3.6 million), the Democratic Republic
+                      of the Congo (2.8 million), Sudan (2.2 million), South Sudan (1.9 million), Pakistan (1.4 million), Nigeria 
+                      (1.2 million) and Somalia (1.1 million). </p>
+                </div>
+            <div class="col-md-12 mr-4" style="font-size:20px;">
+                You can download dataset from here: 
+                <a href="{%static 'internally-displaced-persons-from-disasters.csv'%}" class="homee" style="font-size:23px;"> Dataset <i class="icofont-download"></i></a>
+            </div>
+        </div>
+    
+</div>
+<!-- JavaScript files-->
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="sidebar/front.js"></script>
+
+{% endblock %}

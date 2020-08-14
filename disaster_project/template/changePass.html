@@ -3,37 +3,40 @@
 {% load static %}
         <div class="content-inner ">
           <!-- Page Header-->
-          <header class="page-header">
+ 
             <div class="container-fluid pt-5">
-              <div class="row">
+              <div class="row" style="padding-top: 50px;">
                 <div class="col-md-2"></div>
                 <div class="col-md-8 bg-white p-5 border"style="border-radius: 50px;  " >
-                  <form>
+                  <form action="" method="POST">
+                    {% csrf_token %}
                     <h1 class="text-center" style="text-shadow: 10px 20px 5px #ccc; font-size: 50px;color:#1daccb;">Change Password</h1>
+                    <div style="color: red;">{{res}}</div>
+                    <div style="color: green;">{{rest}}</div>
                     <div class="row">
                         <div class="col-md-6">
                           <label>Your Email Id</label><br/>
-                          <input type="email" REQUIRED class="form-control " placeholder="Enter Subject" name="r"  /> 
+                          <input type="email" REQUIRED class="form-control " placeholder="Enter email" name="r"  /> 
                         </div>
                         <div class="col-md-6">
                           <label>Old Password</label><br/>
-                          <input type="password" REQUIRED class="form-control" placeholder="Enter Old Password" name="r"  /> 
+                          <input type="password" REQUIRED class="form-control" placeholder="Enter Old Password" name="opassword"  /> 
                         </div>
                     </div>
                     <br><label>New Password</label><br/>
-                    <input type="password" REQUIRED class="form-control " placeholder="Enter New Password" name="r"  /> 
+                    <input type="password" REQUIRED class="form-control " placeholder="Enter New Password" name="npassword"  /> 
                     <br>
                     <label>Re-enter Password</label><br/>
-                    <input type="password" REQUIRED class="form-control " placeholder="Enter Re-enter Password" name="r"  /> 
+                    <input type="password" REQUIRED class="form-control " placeholder="Enter Re-enter Password" name="rpassword"  /> 
                     <br>
-                    <button type="submit" name="btn" style="background-color:#1daccb;color:#fff"class="btn rounded-pill" > &nbsp;&nbsp;&nbsp;Send &nbsp;&nbsp;&nbsp;</button>
+                    <button type="submit" name="btn" style="background-color:#1daccb;color:#fff"class="btn rounded-pill" > &nbsp;&nbsp;&nbsp;Reset &nbsp;&nbsp;&nbsp;</button>
                   </form>
                 </div>
                 <div class="col-md-2"></div>
                 
               </div>
             </div>
-          </header>
+          
 
         </div>
       </div>

@@ -1,0 +1,55 @@
+{% extends 'Base.html' %}
+{% block content %}
+{% load static %}
+<div class="content-inner ">
+    <!-- Page Header-->
+   
+        <div class="container-fluid pt-4">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 " >
+                    <h1 class="text-center" style="text-shadow: 10px 20px 5px #ccc; font-size: 50px;color:#1daccb;">
+                      Maximum global precipitation 
+                    </h1>
+                </div>
+                <div class="col-md-2"></div>
+            </div><br>
+            <div class="col-md-12">
+                <form action="" method="POST">
+                    {% csrf_token %}
+               <div class="div-1 d-flex justify-content-center"> 
+                   <label class="heading-text mr-4" style="font-family: Sofia; font-size: 40px;color:black;">Enter year:</label>
+                <input class="" type="number" placeholder="(1901-2015)" name="txt" max="2015" min="1901" style="height: 40px;width: 130px;
+                margin-top: 10px;border-style: solid; border-radius: 20px;border-color: #1daccb; font-size: 20px;"/> </div>
+                 <div class="div-1 d-flex justify-content-center" >
+                    <button type="submit" value="Post" name="btn" style="height: 45px;margin-top: 10px;border-style: solid; border-radius: 20px;background-color:#1daccb;color:#fff"class="btn rounded-pill" > &nbsp;&nbsp;&nbsp;Enter &nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                        </form>
+                    </div>
+                    <div class=" col-md-12 heading-text mr-4" style="font-family: Sofia; font-size:40px;color:black;">
+                        Description:
+                        
+                        </div>
+                        <div class="col-md-12">
+                            <p align=justify>
+                                On average, total annual precipitation has increased over land areas in the United States and worldwide. Since 1901, global
+                                 precipitation has increased at an average rate of 0.08 inches per decade, while precipitation in the contiguous 48 states 
+                                 has increased at a rate of 0.17 inches per decade.
+                              </p>
+                              <p align=justify>
+                                Some parts have experienced greater increases in precipitation than others. A few areas, such as the 
+                                Southwest, have seen a decrease in precipitation. Not all of these regional trends are statistically significant, however. </p>
+                            </div>
+                        <div class="col-md-12 mr-4" style="font-size:20px;">
+                            You can download dataset from here: 
+                            <a href="{%static 'global-precipitation-anomaly.csv'%}" class="homee" style="font-size:23px;"> Dataset <i class="icofont-download"></i></a>
+                        </div>
+                </div>
+          
+        </div>
+        <!-- JavaScript files-->
+        <script src="../js/jquery-3.4.1.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="sidebar/front.js"></script>
+        
+        {% endblock %}

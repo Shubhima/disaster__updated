@@ -1,0 +1,42 @@
+{% extends 'Dashboard.html' %}
+{% block content %}
+<div class="row bg-dark pt-2 text-white">
+    <div class="col-md-12 text-right">
+        <p class="pr-4"><a class="home" href="{% url 'Blog'%}">Blogs</a> &nbsp;> &nbsp;
+        <b>Details</b></p>
+    </div>		
+</div>
+<div class="row">
+    <div class="col-md-12 bg px-0">
+        <div class="text-white"  style="height: 200px; background-color:rgba(29,172,203,0.85); padding: 80px 30px; font-family: Montserrat">
+            <h1><b> Blogs</b> </h1>
+            <p> You can see the Blogs Description here. </p>
+        </div>
+    </div>
+
+</div>
+<div class="row pt-2" >
+    
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <img class="card-img-top" src="{{ bl.Image.url }}" width="150" height="300" alt="Card image cap">
+                <h5 class="card-title"> <b>{{ bl.Title}}</b></h5>
+                <p class="card-text" align=justify><br>
+                    {{ bl.Desc}}<br>
+                    {{ bl.Date}}<br>
+                </p>
+                
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+
+{% endblock %}

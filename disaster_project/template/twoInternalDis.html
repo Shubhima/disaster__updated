@@ -1,0 +1,437 @@
+{% extends 'Base.html' %}
+{% block content %}
+{% load static %}
+<div class="content-inner ">
+    <!-- Page Header-->
+        <div class="container-fluid pt-4">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 " >
+                    <h1 class="text-center" style="text-shadow: 10px 20px 5px #ccc; font-size: 50px;color:#1daccb;">
+                        Comparison of internally displaced persons
+                    </h1>
+                </div>
+                <div class="col-md-2"></div>
+            </div><br>
+            <div class="col-md-12">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="div-1 d-flex justify-content-center"> 
+                        <label class="heading-text mr-4" style="font-family: Sofia; font-size: 40px;color:black;">Enter year:</label>
+                        <input class="" type="number" placeholder="(2008-2017)" name="txt" max="2017" min="2008" style="height: 40px; width: 130px;
+                        margin-top: 10px;border-style: solid; border-radius: 20px;border-color: #1daccb; font-size: 20px;"/> </div>
+                       <div class="div-1 d-flex justify-content-center" >
+                        <label class="heading-text mr-4" style="font-family: Sofia; font-size: 40px;color:black;">Enter Country 1:</label>   
+                        <select class="rounded-pill" style="border-style: solid;  height: 45px; border-radius: 20px;width: 145px;
+                        border-color: #1daccb; margin-top: 10px; font-size: 14px;" id="Disasters"  name="d"> 
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Belize">Belize</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Brunei">Brunei</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Burundi">Burundi</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Cape Verde">Cape Verde</option>
+                    <option value="Central African Republic">Central African Republic</option>
+                    <option value="Chad">Chad</option>
+                    <option value="Chile">Chile</option>
+                    <option value="China">China</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Comoros">Comoros</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Croatia">Croatia</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Czech Republic">Czech Republic</option>
+                    <option value="Democratic Republic of Congo">Democratic Republic of Congo</option>
+                    <option value="Dominica">Dominica</option>
+                    <option value="Dominican Republic">Dominican Republic</option>
+                    <option value="Early-demographic dividend">Early-demographic dividend</option>
+                    <option value="East Asia & Pacific">East Asia & Pacific</option>
+                    <option value="East Asia & Pacific (IDA & IBRD)">East Asia & Pacific (IDA & IBRD)</option>
+                    <option value="East Asia & Pacific (excluding high income)">East Asia & Pacific (excluding high income)</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Ethiopia">Ethiopia</option>>
+                    <option value="Euro area">Euro area</option>>
+                    <option value="Europe & Central Asia (excluding high income)">Europe & Central Asia (excluding high income)</option>>
+                    <option value="European Union">Europian Union</option>>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Finland">Finland</option>
+                    <option value="Fragile anfd conflict affected situations">Fragile anfd conflict affected situations</option>
+                    <option value="France">France</option>
+                    <option value="Gabon">Gabon</option>
+                    <option value="Gambia">Gambia</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Grenada">Grenada</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Guinea-Bissau">Guinea-Bissau</option>
+                    <option value="Haiti">Haiti</option>
+                    <option value="Heavily indebted poor countries (HIPC)">Heavily indebted poor countries (HIPC)</option>
+                    <option value="High income">High income</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="Hong Kong">Hong Kong</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="IBRD only">IBRD only</option>
+                    <option value="IDA & IBRD total">IDA & IBRD total</option>
+                    <option value="IDA blend">IDA blend</option>
+                    <option value="IDA only">IDA only</option>
+                    <option value="IDA total">IDA total</option>
+                    <option value="India">India</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Iran">Iran</option>
+                    <option value="Iraq">Iraq</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Israel">Israel</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Jordan">Jordan</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Kiribati">Kiribati</option>
+                    <option value="Kuwait">Kosovo</option>
+            <option value="Kyrgyzstan">Kyrgyzstan</option>
+            <option value="Laos">Laos</option>
+            <option value="Late-demographic dividend">Late-demographic dividend</option>
+            <option value="Latin America & Caribbean">Latin America & Caribbean</option>
+            <option value="Latin America & Caribbean (IDA & IBRD)">Latin America & Caribbean (IDA & IBRD)</option>
+            <option value="Latin America & Caribbean (excluding high income)">Latin America & Caribbean (excluding high income)</option>
+            <option value="Least developed countries:UN classification">Least developed countries:UN classification</option>
+            <option value="Lebanon">Lebanon</option>
+            <option value="Lesotho">Lesotho</option>
+            <option value="Liberia">Liberia</option>
+            <option value="Low & middle income">Low & middle income</option>
+            <option value="Low income">Low income</option>
+            <option value="Lower middle income">Lower middle income</option>
+            <option value="Madagascar">Madagascar</option>
+            <option value="Malawi">Malawi</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Maldives">Maldives</option>
+            <option value="Mali">Mali</option>
+            <option value="Marshall Islands">Marshall Islands</option>
+            <option value="Mauritius">Mauritius</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Middle East & North Africa (IDA & IBRD)">Middle East & North Africa (IDA & IBRD)</option>
+            <option value="Middle income">Middle income</option>
+            <option value="Mongolia">Mongolia</option>
+            <option value="Montenegro">Montenegro</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Mozambique">Mozambique</option>
+            <option value="Myanmar">Myanmar</option>
+            <option value="Namibia">Namibia</option>
+            <option value="Nepal">Nepal</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Niger">Niger</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="North America">North America</option>
+            <option value="North Korea">North Korea</option>
+            <option value="Norway">Norway</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Palau">Palau</option>
+            <option value="Palestine">Palestine</option>
+            <option value="Panama">Panama</option>
+            <option value="Papua New Guinea">Papua New Guinea</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Peru">Peru</option>
+            <option value="Philippines">Philippines</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Pre-demographic dividend">Pre-demographic dividend</option>
+            <option value="Romania">Romania</option>
+            <option value="Russia">Russia</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+            <option value="Saint Lucia">Saint Lucia</option>
+            <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+            <option value="Samoa">Samoa</option>    
+            <option value="Saudi Arabia">Saudi Arabia</option>    
+            <option value="Senegal">Senegal</option>
+            <option value="Serbia">Serbia</option>
+            <option value="Seychelles">Seychelles</option>
+            <option value="Sierra Leone">Sierra Leone</option>
+            <option value="Solomon Islands">Solomon Islands</option>
+            <option value="Somalia">Somalia</option>
+            <option value="South Africa">South Africa</option>
+            <option value="South Asia">South Asia</option>
+            <option value="South Asia (IDA & IBRD)">South Asia (IDA & IBRD)</option>
+            <option value="South Korea">South Korea</option>
+            <option value="South Sudan">South Sudan </option>
+            <option value="Spain">Spain</option>
+            <option value="Sri Lanka">Sri Lanka</option>
+            <option value="Sub-Saharan Africa">Sub-Saharan Africa (excluding high income)</option>
+            <option value="Sub-Saharan Africa (IDA & IBRD)">Sub-Saharan Africa (IDA & IBRD)</option>
+            <option value="Sub-Saharan Africa (excluding high income)">Sub-Saharan Africa (excluding high income)</option>
+            <option value="Sudan">Sudan</option>
+            <option value="Suriname">Suriname</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+            <option value="Tajikistan">Tajikistan</option>
+            <option value="Tanzania">Tanzania</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Timor">Timor</option>
+            <option value="Togo">Togo</option>
+            <option value="Tonga">Tonga</option>
+            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+            <option value="Tunisia">Tunisia</option>
+            <option value="Turkey">Turkey</option>
+            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+            <option value="Tuvalu">Tuvalu</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="United States">United States</option>
+            <option value="Upper middle income">Upper middle income</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Vanuatu">Vanuatu</option>
+            <option value="Venezuela">Venezuela</option>
+            <option value="Vietnam">Vietnam</option>
+            <option value="World">World</option>
+            <option value="Yemen">Yemen</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+       </select>
+    </div>
+    <div class="div-1 d-flex justify-content-center" >
+     <label class="heading-text mr-4" style="font-family: Sofia; font-size: 40px;color:black;">Enter Country 2:</label>
+      <select class="rounded-pill" style="border-style: solid;  height: 40px; width: 150px; border-radius: 20px;
+      border-color: #1daccb; margin-top: 10px; font-size: 12px;" id="Disasters"  name="dt">                        <option value="Afghanistan">Afghanistan</option>
+                            <option value="Albania">Albania</option>
+                            <option value="Algeria">Algeria</option>
+                            <option value="Angola">Angola</option>
+                            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Austria">Austria</option>
+                            <option value="Azerbaijan">Azerbaijan</option>
+                            <option value="Bahamas">Bahamas</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Belize">Belize</option>
+                            <option value="Benin">Benin</option>
+                            <option value="Bhutan">Bhutan</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Botswana">Botswana</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Brunei">Brunei</option>
+                            <option value="Bulgaria">Bulgaria</option>
+                            <option value="Burkina Faso">Burkina Faso</option>
+                            <option value="Burundi">Burundi</option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Cameroon">Cameroon</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Cape Verde">Cape Verde</option>
+                            <option value="Central African Republic">Central African Republic</option>
+                            <option value="Chad">Chad</option>
+                            <option value="Chile">Chile</option>
+                            <option value="China">China</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Comoros">Comoros</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Croatia">Croatia</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Czech Republic">Czech Republic</option>
+                            <option value="Democratic Republic of Congo">Democratic Republic of Congo</option>
+                            <option value="Dominica">Dominica</option>
+                            <option value="Dominican Republic">Dominican Republic</option>
+                            <option value="Early-demographic dividend">Early-demographic dividend</option>
+                            <option value="East Asia & Pacific">East Asia & Pacific</option>
+                            <option value="East Asia & Pacific (IDA & IBRD)">East Asia & Pacific (IDA & IBRD)</option>
+                            <option value="East Asia & Pacific (excluding high income)">East Asia & Pacific (excluding high income)</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Egypt">Egypt</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="Ethiopia">Ethiopia</option>>
+                            <option value="Euro area">Euro area</option>>
+                            <option value="Europe & Central Asia (excluding high income)">Europe & Central Asia (excluding high income)</option>>
+                            <option value="European Union">Europian Union</option>>
+                            <option value="Fiji">Fiji</option>
+                            <option value="Finland">Finland</option>
+                            <option value="Fragile anfd conflict affected situations">Fragile anfd conflict affected situations</option>
+                            <option value="France">France</option>
+                            <option value="Gabon">Gabon</option>
+                            <option value="Gambia">Gambia</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Grenada">Grenada</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Guinea-Bissau">Guinea-Bissau</option>
+                            <option value="Haiti">Haiti</option>
+                            <option value="Heavily indebted poor countries (HIPC)">Heavily indebted poor countries (HIPC)</option>
+                            <option value="High income">High income</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Hong Kong">Hong Kong</option>
+                            <option value="Hungary">Hungary</option>
+                            <option value="IBRD only">IBRD only</option>
+                            <option value="IDA & IBRD total">IDA & IBRD total</option>
+                            <option value="IDA blend">IDA blend</option>
+                            <option value="IDA only">IDA only</option>
+                            <option value="IDA total">IDA total</option>
+                            <option value="India">India</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Iran">Iran</option>
+                            <option value="Iraq">Iraq</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Israel">Israel</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Jamaica">Jamaica</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Jordan">Jordan</option>
+                            <option value="Kazakhstan">Kazakhstan</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Kiribati">Kiribati</option>
+                            <option value="Kuwait">Kosovo</option>
+                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                    <option value="Laos">Laos</option>
+                    <option value="Late-demographic dividend">Late-demographic dividend</option>
+                    <option value="Latin America & Caribbean">Latin America & Caribbean</option>
+                    <option value="Latin America & Caribbean (IDA & IBRD)">Latin America & Caribbean (IDA & IBRD)</option>
+                    <option value="Latin America & Caribbean (excluding high income)">Latin America & Caribbean (excluding high income)</option>
+                    <option value="Least developed countries:UN classification">Least developed countries:UN classification</option>
+                    <option value="Lebanon">Lebanon</option>
+                    <option value="Lesotho">Lesotho</option>
+                    <option value="Liberia">Liberia</option>
+                    <option value="Low & middle income">Low & middle income</option>
+                    <option value="Low income">Low income</option>
+                    <option value="Lower middle income">Lower middle income</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Mali">Mali</option>
+                    <option value="Marshall Islands">Marshall Islands</option>
+                    <option value="Mauritius">Mauritius</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Middle East & North Africa (IDA & IBRD)">Middle East & North Africa (IDA & IBRD)</option>
+                    <option value="Middle income">Middle income</option>
+                    <option value="Mongolia">Mongolia</option>
+                    <option value="Montenegro">Montenegro</option>
+                    <option value="Morocco">Morocco</option>
+                    <option value="Mozambique">Mozambique</option>
+                    <option value="Myanmar">Myanmar</option>
+                    <option value="Namibia">Namibia</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Nicaragua">Nicaragua</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="North America">North America</option>
+                    <option value="North Korea">North Korea</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Palau">Palau</option>
+                    <option value="Palestine">Palestine</option>
+                    <option value="Panama">Panama</option>
+                    <option value="Papua New Guinea">Papua New Guinea</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Pre-demographic dividend">Pre-demographic dividend</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                    <option value="Saint Lucia">Saint Lucia</option>
+                    <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                    <option value="Samoa">Samoa</option>    
+                    <option value="Saudi Arabia">Saudi Arabia</option>    
+                    <option value="Senegal">Senegal</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="Seychelles">Seychelles</option>
+                    <option value="Sierra Leone">Sierra Leone</option>
+                    <option value="Solomon Islands">Solomon Islands</option>
+                    <option value="Somalia">Somalia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="South Asia">South Asia</option>
+                    <option value="South Asia (IDA & IBRD)">South Asia (IDA & IBRD)</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="South Sudan">South Sudan </option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="Sub-Saharan Africa">Sub-Saharan Africa (excluding high income)</option>
+                    <option value="Sub-Saharan Africa (IDA & IBRD)">Sub-Saharan Africa (IDA & IBRD)</option>
+                    <option value="Sub-Saharan Africa (excluding high income)">Sub-Saharan Africa (excluding high income)</option>
+                    <option value="Sudan">Sudan</option>
+                    <option value="Suriname">Suriname</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                    <option value="Tajikistan">Tajikistan</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Timor">Timor</option>
+                    <option value="Togo">Togo</option>
+                    <option value="Tonga">Tonga</option>
+                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                    <option value="Tuvalu">Tuvalu</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United States">United States</option>
+                    <option value="Upper middle income">Upper middle income</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Vanuatu">Vanuatu</option>
+                    <option value="Venezuela">Venezuela</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="World">World</option>
+                    <option value="Yemen">Yemen</option>
+                            <option value="Zambia">Zambia</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+                        </select>
+                    </div>
+                    <div class="div-1 d-flex justify-content-center" >
+                        <button type="submit" value="Post" name="btn" style="height: 45px;margin-top: 10px;border-style: solid; border-radius: 20px;background-color:#1daccb;color:#fff"class="btn rounded-pill"> &nbsp;&nbsp;&nbsp;Enter &nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                </form>
+            </div>
+            <div class=" col-md-12 heading-text mr-4" style="font-family: Sofia; font-size:40px;color:black;">
+                Description:
+                
+                </div>
+                <div class="col-md-12">
+                  <p align=justify>
+                    An internally displaced person (IDP) is someone who is forced to flee his or her home but who
+                     remains within his or her country's borders. They are often referred to as refugees, although 
+                     they do not fall within the legal definitions of a refugee.
+                  </p>
+                  <p align=justify>
+                    At the end of 2014, it was estimated there were 38.2 million IDPs worldwide, the highest level since
+                     1989, the first year for which global statistics on IDPs are available. The countries with the largest 
+                     IDP populations were Syria (7.6 million), Colombia (6 million), Iraq (3.6 million), the Democratic Republic
+                      of the Congo (2.8 million), Sudan (2.2 million), South Sudan (1.9 million), Pakistan (1.4 million), Nigeria 
+                      (1.2 million) and Somalia (1.1 million). </p>
+                </div>
+            <div class="col-md-12 mr-4" style="font-size:20px;">
+                You can download dataset from here: 
+                <a href="{%static 'internally-displaced-persons-from-disasters.csv'%}" class="homee" style="font-size:23px;"> Dataset <i class="icofont-download"></i></a>
+            </div>
+        </div>
+    
+</div>
+
+
+{% endblock %}

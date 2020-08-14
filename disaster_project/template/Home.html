@@ -7,22 +7,22 @@
     		<div class="carousel-item active">
       			<img src="{%static 'pics/home1.jpg' %}" class="d-block w-100" alt="...">
       			<div class="carousel-caption d-none d-md-block">
-       				<h5>First slide label</h5>
-        			<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+       				<h5>Wildfire</h5>
+        			<p>People who have struggled to recover from experiences with past wildfires also may experience distress.</p>
       			</div>
    			</div>
     		<div class="carousel-item">
      			<img src="{%static 'pics/home2.jpg' %}" class="d-block w-100" alt="...">
       			<div class="carousel-caption d-none d-md-block">
-        			<h5>Second slide label</h5>
-        			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        			<h5>Earthquake  </h5>
+        			<p>Creating evacuation plans and gathering emergency supplies before an earthquake help you and your loved ones feel more secure in the event of an earthquake.</p>
       			</div>
     		</div>
     		<div class="carousel-item">
       			<img src="{%static 'pics/home3.jpg' %}" class="d-block w-100" alt="...">
       			<div class="carousel-caption d-none d-md-block">
-        			<h5>Third slide label</h5>
-        			<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        			<h5>Flood</h5>
+        			<p>Once warnings for floods are issued, the risk for distress becomes greater. </p>
       			</div>
     		</div>
   		</div>
@@ -35,5 +35,67 @@
     		<span class="sr-only">Next</span>
   		</a>
 	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body">
+						<nav class="navbar navbar-light bg-light text-center" style="background-color:  #1daccb;">
+							  <a class="navbar-brand " href="#"style="color: #1daccb;text:center;font-size: 50px;">Blogs</a>
+						</nav>
+						<div data-spy="scroll" style="height: 300px; overflow-y: scroll;" data-target="#navbar-example2" data-offset="0">
+							<h4>COVID-19 Topic Page and latest improvements to usa</h4>
+							<p>When the World Health Organization pronounced COVID-19 a pandemic on March 11 2020, there were more than 118,000 cases in 114 countries, and 4,291 people had lost their lives. At time of writing, those numbers had topped 1,350,000 cases in 184 countries, with almost 75,000 <a class="home" href="{% url 'Blog'%}"style="text-decoration: none;">Read more...</a></p>
+							<h4 >Help to shed light on complex humanitarian issues</h4>
+							<p>It is a commonplace that there is an abundance of information available about humanitarian situations; the key issue is not how much information we have at our disposal but how we present it in the most user-friendly manner, so that our audience can tap into it quickly and easily <a class="home" href="{% url 'Blog'%}" style="text-decoration: none;">Read more...</a></p>
+							<h4 >Information-sharing during protracted emergencies</h4>
+							<p>As an outcome of the 2016 World Humanitarian Summit, the Grand Bargain aims at improving the efficiency of humanitarian action. Among the commitments made were increasing the transparency in financing and support to local responders <a class="home" href="{% url 'Blog'%}" style="text-decoration: none;">Read more...</a></p>
+							<h4><a style="color: #1daccb;text-decoration: none;" href="{% url 'Blog'%}">Read more....</a></h4>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body">
+						<nav class="navbar navbar-light bg-light text-center" style="background-color:  #1daccb;">
+							  <a class="navbar-brand " href="#"style="color: #1daccb;text:center;font-size: 45px;">Organizations</a>
+						</nav>
+						<div data-spy="scroll" style="height: 300px; overflow-y: scroll;" data-target="#navbar-example2" data-offset="0">
+							<h4>National Disaster Management Authority (India)</h4>
+							<p>National Disaster Management Authority, abbreviated as NDMA, is an apex Body of Government of India, with a mandate to lay down policies for disaster management. The phrase disaster management is to be understood to mean 'a continuous and integrated process of planning, organising <a class="home" href="{% url 'Organization'%}"style="text-decoration: none;">Read more...</a></p>
+							<h4 >United Nations Office for Disaster Risk Reduction</h4>
+							<p>The United Nations Office for Disaster Risk Reduction (UNDRR) was created in December 1999 to ensure the implementation of the International Strategy for Disaster Reduction (General Assembly (GA) resolution 54/219 <a class="home" href="{% url 'Organization'%}" style="text-decoration: none;">Read more...</a></p>
+							<h4 >Federal Emergency Management Agency</h4>
+							<p>The Federal Emergency Management Agency (FEMA) is an agency of the United States Department of Homeland Security, initially created under President Jimmy Carter by Presidential Reorganization Plan No. 3 of 1978 and implemented by two Executive Orders on April 1, 1979 <a class="home" href="{% url 'Organization'%}" style="text-decoration: none;">Read more...</a></p>
+							<h4><a style="color: #1daccb;text-decoration: none;" href="{% url 'Organization'%}">Read more....</a></h4>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body">
+						<nav class="navbar navbar-light bg-light text-center" style="background-color:  #1daccb;">
+							  <a class="navbar-brand " href="#"style="color: #1daccb;text:center;font-size: 50px;">Disasters</a>
+						</nav>
+						<div data-spy="scroll" style="height: 300px; overflow-y: scroll;" data-target="#navbar-example2" data-offset="0">
+							<h4>Floods</h4>
+							<p>Floods are one of the most common hazards in the United States. They occur when land that is normally dry experiences an overflow of water. <a class="home" href="{% url 'TypesOfDisaster'%}"style="text-decoration: none;">Read more...</a></p>
+							<h4 >Wildfires</h4>
+							<p>Wildfires are usually triggered by lightning or accidents and often go unnoticed at first. They can spread quickly and are especially destructive if they occur near forests, rural areas <a class="home" href="{% url 'TypesOfDisaster'%}" style="text-decoration: none;">Read more...</a></p>
+							<h4 >Earthquake</h4>
+							<p>An earthquake is the shifting of the Earth’s plates, which results in a sudden shaking of the ground that can last for a few seconds to a few minutes. Within seconds <a class="home" href="{% url 'TypesOfDisaster'%}" style="text-decoration: none;">Read more...</a></p>
+							<h4><a style="color: #1daccb;text-decoration: none;" href="{% url 'TypesOfDisaster'%}">Read more....</a></h4>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 		<br>
 		{% endblock %}

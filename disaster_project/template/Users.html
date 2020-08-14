@@ -1,0 +1,31 @@
+{% extends 'SubsAdmin.html' %}
+{% block content %}
+{% load static %}
+<div class="content-inner ">
+    <!-- Page Header-->
+   
+        <div class="container-fluid pt-4">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 " >
+                    <h1 class="text-center" style="text-shadow: 10px 20px 5px #ccc; font-size: 50px;color:#1daccb;">
+                        
+                    </h1>
+                </div>
+                <div class="col-md-2"></div>
+            </div><br>
+            <div class="col-md-12 text-center pt-5 " style="padding-left: 400px;">
+                <table>
+                    
+                        {% for x in ul %}
+                        <tr>
+                            <td>{{x.Name}}</td>
+                            <td>{{x.Email}}</td>
+                        </tr>
+                        {%endfor%}
+                    
+                </table>
+            </div>
+        </div>
+</div>
+{% endblock %}

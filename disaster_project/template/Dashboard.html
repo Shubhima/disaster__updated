@@ -2,19 +2,67 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
-	<link rel="stylesheet" type="text/css" href="{%static 'css/icofont.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/icofont.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css' %}">
 	<style type="text/css">
 		.home:hover{
 			color: #1daccb;
 		}
 		.home{color: white;}
-		.bg{background-size: cover;
+		.bg{
+        background-size: cover;
 		background-repeat: no-repeat;
-		background-image: url(pics/sub-header.jpg);}
+		background-image: url('{% static "Pics/sub-header.jpg"%}');}
 		.hv{background-color: black; color: white;}
 		.hv:hover{background-color: #1daccb; }
+        body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
+.open-button {
+    background-color: #555;
+  color: white;
+  
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  
+  bottom: 23px;
+ 
+  
+}
+
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  
+ 
+
+}
+
+.fcontainer {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.cancel {
+  background-color: black;
+  
+}
+
+
+.open-button:hover {
+  opacity: 1;
+}
 	</style>
 
 </head>
@@ -25,7 +73,7 @@
 			<div class="col-md-3 pt-2 pb-2"><i class="icofont-pin"></i> Ranjit-Avenue, Amritsar </div>
 			<div class="col-md-3 pt-2 pb-2"><i class="icofont-phone"></i> Contact Us (+91) 90876 54289</div>
 			<div class="col-md-2"></div>
-			<div class="col-md-2 pt-2 pb-2 text-center" style="background-color:#1daccb"> <a  href="Login.html" style="color: white; text-decoration: none;">Sign In &nbsp; &nbsp;&nbsp; &nbsp; Sign Up</a></div>
+			<div class="col-md-2 pt-2 pb-2 text-center" style="background-color:#1daccb"> <a  href="{% url 'LogIn'%}" style="color: white; text-decoration: none;">Sign In &nbsp; &nbsp;&nbsp; &nbsp; Sign Up</a></div>
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-light bg-white pt-4 pb-4">
  			<a class="navbar-brand" href="#">
@@ -34,23 +82,23 @@
   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
     			<ul class="navbar-nav ml-auto pr-5">
       				<li class="nav-item active">
-       					<a class="nav-link" href="Home.html">Home</a>
+       					<a class="nav-link" href="{% url 'Home'%}">Home</a>
       				</li>
       				<li class="nav-item active">
-        				<a class="nav-link" href="AboutUs.html">AboutUs</a>
+        				<a class="nav-link" href="{% url 'AboutUs'%}">AboutUs</a>
       				</li>
      				<li class="nav-item active">
-        				<a class="nav-link" href="#">Blogs</a>
+        				<a class="nav-link" href="{% url 'Blog'%}">Blogs</a>
      				</li>
       				<li class="nav-item active">
-        				<a class="nav-link" href="organization.html">Organization</a>
+        				<a class="nav-link" href="{% url 'Organization'%}">Organization</a>
       				</li>
       				
       				<li class="nav-item active">
-       					<a class="nav-link " href="#">Types</a>
+       					<a class="nav-link " href="{% url 'TypesOfDisaster' %}">Types</a>
      				</li>
      				<li class="nav-item active">
-        				<a class="nav-link" href="Contact.html">ContactUs</a>
+        				<a class="nav-link" href="{% url 'Contact'%}">ContactUs</a>
       				</li>
     			</ul>
  			</div>
@@ -65,7 +113,7 @@
                     </a>
                 </div></div>
                 <p style="padding: 30px; text-align: center;">
-                    ReliefWeb’s teams work around the clock to provide reliable and timely information,<br> enabling humanitarian workers to make informed decisions and to plan effective response.
+                    DisasterRelief’s teams work around the clock to provide reliable and timely information,<br> enabling humanitarian workers to make informed decisions and to plan effective response.
                 </p>
             
             <div class="row" style="padding:20px;">
@@ -76,26 +124,22 @@
                         <div class="menu-menu-2-container">
                                 <p style="border-bottom: 1px solid white"></p>
                                 <p style="border-bottom: 1px solid white;padding-bottom: 4px;">
-                                    <a href="Home.html" style="color: white; text-decoration: none;">>&nbsp;&nbsp;Home</a>
+                                    <a class="home"  style="text-decoration:none;" href="{% url 'Home'%}" style="color: white; ">>&nbsp;&nbsp;Home</a>
                                 </p>
     
                                 <p style="border-bottom: 1px solid white;padding-bottom: 5px;">
-                                    <a href="" style="color: white; text-decoration: none;">>&nbsp;&nbsp; Latest News</a>
+                                    <a class="home"  style="text-decoration:none;" href="" style="color: white;">>&nbsp;&nbsp; Blogs / News</a>
                                 </p>
                                 <p style="border-bottom: 1px solid white;padding-bottom: 4px;">
-                                    <a href="" style="color: white; text-decoration: none;">>&nbsp;&nbsp;Our Work</a>
+                                    <a class="home"  style="text-decoration:none;" href="{% url 'AboutUs'%}" style="color: white;">>&nbsp;&nbsp;Our Work</a>
                                 </p>
+                                
                                 <p style="border-bottom: 1px solid white;padding-bottom: 4px;">
-                                    <a href="" style="color: white; text-decoration: none;">>&nbsp;&nbsp;Careers</a>
+                                    <a class="home"  style="text-decoration:none;" href="{% url 'AboutUs'%}" style="color: white;">>&nbsp;&nbsp;About Us</a>
                                 </p>
-                                <p style="border-bottom: 1px solid white;padding-bottom: 4px;">
-                                    <a href="" style="color: white; text-decoration: none;">>&nbsp;&nbsp;Who We Are</a>
-                                </p>
-                                <p style="border-bottom: 1px solid white;padding-bottom: 4px;">
-                                    <a href="" style="color: white; text-decoration: none;">>&nbsp;&nbsp;Shop</a>
-                                </p>
+
                                 <p>
-                                    <a href="Contact.html" style="color: white; text-decoration: none;">>&nbsp;&nbsp;Contact Us</a>
+                                    <a class="home" style=" text-decoration:none;" href="{% url 'Contact'%}" style="color: white;">>&nbsp;&nbsp;Contact Us</a>
                                 </p>
     
                         </div>
@@ -104,45 +148,38 @@
                 <div class="col-md-6 col-sm-6">
                     <div>
                         <div class="widget" style="padding-left: 60px;">
-                            <h4 class="widget-title">Recent Post</h4><br>
+                            <h4 class="widget-title">License </h4><br>
                             <div class="clear"></div>
                             <div class="widget-recentpost">
-                                <div>
-                                    <figure>
-                                        <img src="pics/foo1.jpg" alt="" width="60" height="60" />
-                                        <a class="icon-box" href=""></a>
-                                    </figure>
-                                    <div class="text-overflow">
-                                        <h6><a href=""></a></h6>
-                                        <em >11 Apr 2017</em>
+                                <p align=justify>
+                                    All of DisasterRelief is completely open access and all work is licensed under the Creative Commons BY license.
+                                     You have the permission to use, distribute, and reproduce in any medium, provided the source and authors are credited.
+                                </p>
+                                <p align=justify>
+                                    <div class="body">Please consult our full <b><button class="open-button text-white " onclick="openForm()">Legal disclaimer</button></a></b>
+                                        <div class="fcontainer  justify-content-center form-popup" id="myForm" style="background-color:#555;">
+                                            <p align=justify>To the fullest extent permitted by the applicable law, Disaster Relief offers the websites and services as-is and
+                                                 makes no representations or warranties of any kind concerning the websites or services, express, implied, or noninfringement. 
+                                                  Disaster Relief does not warrant that the functions or content contained on the website or services will be uninterrupted 
+                                                  or error-free, that defects will be corrected, or that Disaster Relief servers are free of viruses or other harmful components.
+                                                  Disaster Relief does not warrant or make any representation regarding use or the result of use of the content in terms of accuracy,
+                                                   reliability, or otherwise.</p>
+                                                     
+                                              <button type="button" class="btn cancel text-white" onclick="closeForm()">Close</button>
+                                            
+                                          </div>
                                     </div>
-                                </div>
-                                <div class="d-relf-recentpost">
-                                    <figure>
-                                        <img src="pics/foo2.jpg" alt="" width="60" height="60" />
-                                        <a class="icon-box" href=""></a>
-                                    </figure>
-                                    <div class="text-overflow">
-                                        <h6><a href=""></a></h6>
-                                        <em class="kf_date">11 Apr 2017</em>
-                                    </div>
-                                </div>
-                                <div class="d-relf-recentpost">
-                                    <figure>
-                                        <img src="pics/foo3.jpg" alt="" width="60" height="60" />
-                                        <a class="icon-box" href=""></a>
-                                    </figure>
-                                    <div class="text-overflow">
-                                        <h6><a href=""></a></h6>
-                                        <em class="kf_date">11 Apr 2017</em>
-                                    </div>
-                                </div>
+                                </p>
+                                <p align=justify>Disaster Relief is a project of the Global Change Data Lab, a registered charity in India (Charity Number 1186433)
+                                </p>
+                                <p align=justify>Disaster Relief is free and accessible for everyone.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <br>
+           
         </div>
         <div class="text-white container-fluid"  style="background-color:rgba(29,172,203,0.85); ">
             <div class="container pt-2 pb-2">
@@ -155,6 +192,18 @@
     </div>
     </div>
         </div>
-       
+        
+        <script src="{%static 'js/jquery-3.4.1.min.js' %}"></script>
+      <script src="{%static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+        </script>
+      
     </body>
     </html>

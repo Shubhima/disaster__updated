@@ -3,12 +3,12 @@
 {% load static %}
 		<div class="row bg-dark pt-2 text-white">
 			<div class="col-md-12 text-right">
-				<p class="pr-4"><a class="home" href="Home.html">Homepage</a> &nbsp;> &nbsp;
+				<p class="pr-4"><a class="home" href="{% url 'Home'%}">Homepage</a> &nbsp;> &nbsp;
 				<b>About Us</b></p>
 			</div>		
 		</div>
 		<div class="row">
-			<div class="col-md-12 bg px-0">
+			<div class="col-md-12 bg px-0" >
 				<div class="text-white"  style="background-color:rgba(29,172,203,0.85); padding: 80px 30px; font-family: Montserrat">
 					<h1><b> How We Work</b> </h1>
 					
@@ -17,16 +17,27 @@
 			<div></div>
 		</div>
 	</div>
-	<div class="container-fluid pt-5">
+	<div class="container-fluid pt-5 pl-4 pr-4">
 		
 			<div class="row">
 				<div class="col-md-6">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/NT_fVQ1LdQY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 				<div class="col-md-6">
-					<span style="float: left; font-size: 14px; font-style: italic; font-family: 'playfair Display',serif;">Services</span>
-					<strong style="font-family:Montserrat;font-style: normal;">What WE Do ?</strong>
-				</div>
-			</div>	
+					<p align=justify style="font-family:Montserrat;font-style: normal;"><b>What WE Do ?</b></p>
+					<p align=justify>Poverty, disease, hunger, climate change, war, existential risks, and inequality: The world faces many great and terrifying problems. It is these large problems that our work at Disaster Relief focuses on.</p>
+					<p align=justify>Thanks to the work of thousands of researchers around the world who dedicate their lives to it, we often have a good understanding of how it is possible to make progress against the large problems we are facing. The world has the resources to do much better and reduce the suffering in the world.</p>
+					<p align=justify>The goal of our work is to make the knowledge on the big problems accessible and understandable. This website is about <span style="font-family: Lato,Helvetica Neue,Arial,sans-serif;"><b><i>Research and data to make progress against the world’s largest problems.</i></b></span></p>
+				</div>	
+			</div>
+	</div>
+	<div class="container-fluid pl-5 pr-5">
+		<div class="row">
+			<p align=justify>If you want to contribute to a better future you need to know the problems the world faces. To understand these problems the daily news is not enough. The news media focuses on events and therefore largely fails to report the two aspects that <i>We</i> focuses on: the large problems that continue to confront us for centuries or much longer and the long-lasting, forceful changes that gradually reshape our world.</p>
+			<p align=justify>To understand issues that are affecting billions, we need data. We need to carefully measure what we care about and make the results accessible in an understandable and public platform. This allows everyone to see the state of the world today and track where we are making progress, and where we are falling behind. The publication we are building has this goal. Through interactive data visualizations we can see how the world has changed; by summarizing the scientific literature we can understand why.</p>
+			<p align=justify>Newton said, “If I have seen further than others, it is because I’ve stood on the shoulders of giants.” This is how science should work. Those who want to understand the world should be able to stand on the shoulders of those who came before them. A key part of our mission is therefore to build an infrastructure that makes research and data openly available and useful for all.</p>
+			<p align=justify>We design our work with the aim of generating an impact beyond what our team can achieve directly. By producing charts and data that can be freely downloaded and embedded in others’ work, we support and empower colleagues in policy, media and civil society also working on the problems we focus on. </p>
+			<p align=justify>If you want to use data or visualizations from the site, you don’t need to contact us: please just go ahead and do so! The terms of our license only require attribution.</p>
+		</div>	
 	</div>
 	{% endblock %}

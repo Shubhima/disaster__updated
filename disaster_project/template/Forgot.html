@@ -1,0 +1,53 @@
+{% extends 'Dashboard.html' %}
+{% block content %}
+{% load static %}
+<div class="row bg-dark pt-2 text-white">
+    <div class="col-md-12 text-right">
+        <p class="pr-4"><a class="home" href="{% url 'LogIn'%}">Log in/Register</a> &nbsp;> &nbsp;
+        <b>Forgot Password</b></p>
+    </div>		
+</div>
+<div class="container">
+    
+<form action="" method="POST">
+    {% csrf_token %}
+
+    <div class="row text-center">
+        
+        <div class="col-md-12 pt-2">
+    <img class="avatar" src="{%static 'pics/lock.png' %}" style="height: 90px;"></div>
+    <div class="col-md-12 pt-3">
+    <h1>Forgot Password?</h1></div>
+    <div class="col-md-12">You can reset your password here. </div>
+                   
+    <br><br>
+    <div class="input-div one ">
+        <div class="i">
+            <i class="fas fas fa-envelope-square"></i>
+        </div>
+    </div>
+    <div class="col-md-12 " style="padding-top: 10px; ">
+        <div class="input-group mb-2 mr-sm-2 justify-content-center">
+            <div class="input-group-prepend">
+                <div class="input-group-text"><i class="icofont icofont-ui-message"></i></div>
+            </div>
+            <input type="email" class="input"  placeholder="   email address" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+             title="Invalid email address" style="width: 320px;" required>
+        </div>
+    </div>
+    <div class="col-md-12 " style=" color: red;">{{res}}</div>
+    <div class="col-md-12 " style=" color: green;">{{rest}}</div> 
+    <div class="col-md-12 pt-1 pb-4">
+        <button type="submit" class="btn  pull-right" style="width: 360px;background-color:#1daccb;color:#fff">Get Password</button>
+    </div>
+    <div class="clearfix"></div>
+    </div>
+    
+    
+    
+    
+</form>
+</div>
+</div>
+
+{% endblock %}

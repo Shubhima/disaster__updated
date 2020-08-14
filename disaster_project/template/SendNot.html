@@ -1,0 +1,29 @@
+{% extends 'SubsAdmin.html' %}
+{% block content %}
+{% load static %}
+<div class="content-inner ">
+    <!-- Page Header-->
+      <div class="container-fluid pt-5">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8 bg-white p-5 border"style="border-radius: 50px;  " >
+            <form action="" method="POST">
+              {% csrf_token %}
+              <h1 class="text-center" style="text-shadow: 10px 20px 5px #ccc; font-size: 50px;color:#black;">Send Notifications</h1><br>
+              <label>Subject</label><br/>
+              <input REQUIRED type="text" name="txt" placeholder="Enter Your Subject" class="form-control"><br/>
+              <label>Message</label><br/>
+              <textarea REQUIRED class="form-control" placeholder="Message" rows="5" name="tarea"></textarea><br/>
+              <button name="btn" type="submit" class="btn " style="background-color:black;color:#fff">Send</button>
+            </form>
+          </div>
+          <div class="col-md-2"></div>
+          
+        </div>
+      </div>
+
+  </div>
+</div>
+</div>
+
+{% endblock %}

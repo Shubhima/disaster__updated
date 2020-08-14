@@ -18,8 +18,8 @@ class TypesOfDisaster(models.Model):
     return self.Name
 
 class Organization(models.Model):
- Name=models.CharField(max_length=30)
- Contact_Info = models.CharField(max_length=30) 
+ Name=models.CharField(max_length=50)
+ Contact_Info = models.CharField(max_length=100) 
  Image = models.ImageField()
  Desc = models.TextField(max_length=1024*2)
  def __str__(self):
@@ -40,6 +40,36 @@ class Post(models.Model):
     content= models.TextField()
 
 
+class ContactUs(models.Model):
 
+    Name = models.CharField(max_length=50)
+    Email = models.EmailField()
+    Message = models.TextField(max_length=1024*2)
+    PhoneNo = models.CharField(max_length=10)
+    def __str__(self):
+        return self.Name
 
+class Review(models.Model):
+    Subject = models.CharField(max_length=300)
+    Message=models.TextField()
+
+class HelpSupport(models.Model):
+    Subject = models.CharField(max_length=300)
+    Message=models.TextField()
+
+class Register(models.Model):
+ Name = models.CharField(max_length=30)
+ Email = models.EmailField()
+ Pass = models.CharField(max_length=15)
+ 
+
+class Subscribe(models.Model):
+ Email = models.EmailField()
+
+class Notify(models.Model):
+    Subject = models.CharField(max_length=300)
+    Message=models.TextField()
+    
+    def __str__(self):
+                return self.Subject
 

@@ -1,0 +1,82 @@
+{% extends 'Base.html' %}
+{% block content %}
+{% load static %}
+<div class="content-inner "style="height: 700px; overflow: auto;">
+    <!-- Page Header-->
+ 
+      <div class="container-fluid pt-5">
+        <div class="row">
+            <div class="col-md-2"></div>
+                <div class="col-md-8  " >
+            <h1 class="text-center" style="text-shadow: 10px 20px 5px #ccc; font-size: 50px;color:#1daccb;">
+              Global precipitation anomaly</h1></div>
+            <div class="col-md-2"></div>
+          </div><br><br>
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8  " >
+            <h1 class="text-center" style=" font-size: 30px;">
+              Maximum global precipitation in year 2014</h1></div>
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+          <div class="row"> <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div  >
+                    <img  src="{%static 'Visualization graphs\Global precipitation\Max.png' %}" width="300" height="300" alt="Card image cap">
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="row p-2"><p align=justify>In the visualization shown we see the maximum global precipitation anomaly of year 2014.This precipitation anomaly is measured relative to the century average from 1901 to 2015 based on rainfall and snowfall measurements from land-based weather stations
+            worldwide. </p></div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8  " >
+                <h1 class="text-center" style=" font-size: 30px;">
+                  Minimum global precipitation in year 2010</h1></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-2"></div>
+              <div class="row"> <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div  >
+                        <img  src="{%static 'Visualization graphs\Global precipitation\Min10.png' %}" width="300" height="300" alt="Card image cap">
+                    </div>
+                  </div>
+                </div> 
+              </div>
+              <div class="row p-2"><p align=justify>In the visualization shown we see the minimum global precipitation anomaly of year 2010.This precipitation anomaly is measured relative to the century average from 1901 to 2015 based on rainfall and snowfall measurements from land-based weather stations
+                worldwide. </p></div>
+                <div class="row">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-8  " >
+                    <h1 class="text-center" style=" font-size: 30px;">
+                      Top 5 countries of Global Precipitation</h1></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2"></div>
+                  <div class="row"> <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <div  >
+                            <img  src="{%static 'Visualization graphs\Global precipitation\Top5.png' %}" width="300" height="300" alt="Card image cap">
+                        </div>
+                      </div>
+                    </div> 
+                  </div>
+                  <div class="row p-2"><p align=justify>In the visualization shown we see the top 5 global precipitation anomaly of year 1916 to 2015.This precipitation anomaly is measured relative to the century average from 1901 to 2015 based on rainfall and snowfall measurements from land-based weather stations
+                    worldwide. </p></div>
+                        
+          <div class="col-md-2"></div>
+          
+        </div>
+      </div>
+
+  </div>
+</div>
+</div>
+
+    
+
+
+{% endblock %}

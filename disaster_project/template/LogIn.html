@@ -3,7 +3,7 @@
 {% load static %}
 		<div class="row bg-dark pt-2 text-white">
 			<div class="col-md-12 text-right">
-				<p class="pr-4"><a class="home" href="{%static 'Home.html' %}">Homepage</a> &nbsp;> &nbsp;
+				<p class="pr-4"><a class="home" href="{% url 'Home'%}">Homepage</a> &nbsp;> &nbsp;
 				<b>Log in/Register</b></p>
 			</div>		
 		</div>
@@ -13,66 +13,71 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<form action="/user/login" method="post" id="user-login" accept-charset="UTF-8">
+					<form action="" method="POST" >
+						{% csrf_token %}
 						<fieldset>
 						<legend>Log In</legend><br>
 						<div class="form-item form-type-textfield form-item-name">
 							<label for="edit-name"><b>Username or e-mail address</b></label>
-							<input type="text" id="edit-name" name="name" value="" size="65" maxlength="60" class="form-text required" />
+							<input REQUIRED type="email" id="edit-name" name="n" value="" size="60" maxlength="60" class="form-text required" />
 							<div class="description"><i>You may login with either your assigned username or your e-mail address.</i>
 							</div>
 					    </div>
 					    <br>
 					    <div class="form-item form-type-password form-item-pass">
  							<label for="edit-pass"><b>Password</b></label>
- 							<input type="password" id="edit-pass" name="pass" size="65" maxlength="128" class="form-text required" />
+ 							<input REQUIRED type="password" id="edit-pass" name="p" size="60" maxlength="128" class="form-text required" />
 							<div class="description pb-2"><i>The password field is case sensitive.</i></div>
 						</div>
 						</fieldset>
+						{% if formpost %}
+						<div style="color: red;"> Wrong password. Try again or click forgot password to reset it.</div>
+						{% endif %}
+						{% csrf_token %}
 						<div class="pt-2">
-							<button type="button" name="btn" class="btn btn-info"style="background:#1daccb ;margin: 2px;"> Login <i class="icofont-login"></i></button>&nbsp; &nbsp; &nbsp;
-							<a href="" style="color: #1daccb">Forgot Password?</a>
+							<button type="submit" name="b" class="btn btn-info"style="background:#1daccb ;margin: 2px;"> Login <i class="icofont-login"></i></button>&nbsp; &nbsp; &nbsp;
+							<a href="{% url 'Forgot'%}" style="color: #1daccb">Forgot Password?</a>
 						</div>
-						<div class="pt-2"> or</div> <div></div>
+						
 					</form>
-					<div class="pt-2">
-					<form action="/user/login" method="post">
-						<button type="submit" name="hid" class="btn btn-info " >
-							Log in with Google Account <i class="icofont-login"></i>
-						</button>
-					</form>
-				</div>
+				
 				</div>
 				<div></div>
-				<div class="col=col-md-6">
-					<form class="user-info-from-cookie" enctype="multipart/form-data" action="/user/login" method="post" id="user-register-form" accept-charset="UTF-8">
+				<div class="col=col-md-6 pl-4">
+					<form action="{% url 'NewRegister' %}" method="POST">
+						{% csrf_token %}
 						<fieldset>
 							<legend>
 								New here? Sign Up
 							</legend>
+							<div style="color: green;"> {{us}}</div>
+							<div style="color: red;"> {{err}}</div>
+							<input type="hidden" name="formtype" value="reg">
 							<div class="form-wrapper pt-2">
 								<div class="form-item form-type-textfield form-item-name">
 									<label for="edit-name--2"><b>Full Name</b></label>
-									<input class="username form-text required" type="text" id="edit-name--2" name="name" value="" size="60" maxlength="60" />
+									<input REQUIRED class="username form-text required" type="text" id="edit-name--2" name="name" value="" size="60" maxlength="60" />
 								</div>
 								<div class="form-item form-type-textfield form-item-mail pt-2">
 									<label for="edit-mail"><b>E-mail address</b></label>
-									<input type="text" id="edit-mail" name="mail" value="" size="60" maxlength="254" class="form-text required" />
+									<input REQUIRED type="email" id="edit-mail" name="mail" value="" size="60" maxlength="254" class="form-text required" />
 								</div>
 								<div class="form-item form-type-password form-item-pass pt-2">
  									<label for="edit-pass"><b>Set Password</b></label>
- 									<input type="password" id="edit-pass" name="pass" size="60" maxlength="128" class="form-text required" />
+ 									<input REQUIRED type="password" id="edit-pass" name="pass" size="60" maxlength="128" class="form-text required" />
  								</div>
  								<div class="form-item form-type-password form-item-pass pt-2">
  									<label for="edit-pass"><b>Confirm Password</b></label>
- 									<input type="password" id="edit-pass" name="pass" size="60" maxlength="128" class="form-text required" />
- 								</div><br>
+ 									<input REQUIRED type="password" id="edit-pass" name="cpass" size="60" maxlength="128" class="form-text required" />
+								 </div>
+								 <div style="color: red;"> {{ch}}</div>
+								 <br>
  								<div>
-									<button type="button" name="btn" class="btn btn-info"style="background:#1daccb ;margin: 2px;"> Sign Up <i class="icofont-login"></i></button>
+									<button REQUIRED type="submit" type="button" name="btn" class="btn btn-info"style="background:#1daccb ;margin: 2px;"> Sign Up <i class="icofont-login"></i></button>
 								</div>
 							</div>
 						</fieldset>
-					
+					</form>
 				</div>
 			</div>
 		</div>

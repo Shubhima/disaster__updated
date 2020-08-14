@@ -1,0 +1,43 @@
+
+            {% extends 'Base.html' %}
+            {% block content %}
+            {% load static %}
+            <div class="content-inner ">
+                <!-- Page Header-->
+            
+                  <div class="container">
+                        <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8  pt-3" >
+                <h1 class="text-center" style="text-shadow: 10px 20px 5px #ccc; font-size: 50px;color:#1daccb;">
+                  Direct disaster loss as a share of gdp</h1>
+                    <p class="text-center pt-3 description" style="font-size: 23px; font-family: 'inherit' ; font-style: italic;"> Make your own visualizations here. </p></div>
+            
+                      </div>
+                      <div></div>
+               </div>
+               <div class="col-md-8 pt-4 ml-4">
+                                <ul style=" font-size: 26px;color:black;">
+                                  <a  href="{% url 'DgdpCount'%}" style="text-decoration: none; color: black;"><li class="homee"> Enter country to find loss of GDP percentage.</li></a>
+                                  <a  href="{% url 'YearDgdp'%}" style="text-decoration: none; color: black;">  <li class="homee">Enter year and country to find loss of GDP percentage.</li></a>
+                                  <a  href="{% url 'twoCountDgdp'%}" style="text-decoration: none; color: black;"><li class="homee">Comparison of two countries loss of GDP in particular year.</li>
+                                  <a  href="{% url 'MaxDgdp'%}" style="text-decoration: none; color: black;"><li class="homee">Maximum loss of GDP in particular year.</li>
+                                  <a  href="{% url 'MinDgdp'%}" style="text-decoration: none; color: black;"><li class="homee">Minimum loss of GDP in particular year.</li>
+                                  <a  href="{% url 'Top5Dgdp'%}" style="text-decoration: none; color: black;"><li class="homee">Top5 loss of GDP in particular year.</li>
+                                   
+                                </ul></div>
+                              </div>
+                             
+                          
+                            
+            
+                
+            <!-- JavaScript files-->
+            <script src="../js/jquery-3.4.1.min.js"></script>
+            <script src="../js/bootstrap.bundle.min.js"></script>
+            <script src="sidebar/front.js"></script>
+            
+            {% endblock %}
+                     
+                      
+                  

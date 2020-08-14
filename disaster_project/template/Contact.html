@@ -3,12 +3,12 @@
 {% load static %}
 		<div class="row bg-dark pt-2 text-white">
 			<div class="col-md-12 text-right">
-				<p class="pr-4"><a class="home" href="Home.html">Homepage</a> &nbsp;> &nbsp;
+				<p class="pr-4"><a class="home" href="">Homepage</a> &nbsp;> &nbsp;
 				<b>Contact Us</b></p>
 			</div>		
 		</div>
 		<div class="row">
-			<div class="col-md-12 bg px-0">
+			<div class="col-md-12 bg px-0" >
 				<div class="text-white"  style="background-color:rgba(29,172,203,0.85); padding: 80px 30px; font-family: Montserrat">
 					<h1><b> Contact Us</b> </h1>
 					<p> You can contact us from here for the donation. </p>
@@ -76,7 +76,7 @@
 						<i class="icofont-mail text-white icofont-3x"></i></button></div>
 						<div class="col-md-8 pt-3">
 							<h5>Email Address </h5>
-							<p style="font-family: 'Montserrat, sans-serif'; color: rgb(153, 153, 153); font-size: 17px;">rshubhimar@outlook.com</br>
+							<p style="font-family: 'Montserrat, sans-serif'; color: rgb(153, 153, 153); font-size: 17px;">relief.disasterhelp@gmail.com</br>
 					 		info@disaster.com</p>
 					 	</div>
 					</div>
@@ -84,21 +84,22 @@
 			</div>
 	 <div class="container">
 	 	<hr><br><br>
-	 		<form>
+	 		<form action="" method="POST">
+				{% csrf_token %}
 
 	 	<div class="row">
 	 		<div class="col-md-4">
 	 			<input type="text" required="required" name="nm" class="form-control" placeholder="YourName" pattern="[A-Z a-z]{2,40}"></div>
 
 	 		<div class="col-md-4">
-				<input type="email" required="required" name="em" class="form-control" placeholder="YourEmailId"></div>
+				<input type="email" required="required" name="e" class="form-control" placeholder="YourEmailId"></div>
 
 	 		<div class="col-md-4">
 				<input type="tel" name="ph" class="form-control" placeholder="YourPhoneNo" pattern="[0-9]{10}"></div> 
 
 	 		<div class="col-md-12 mt-3">
 				<textarea class="form-control p-2" name="msg" maxlength="400" placeholder="Type Your Message Here" rows="8"></textarea><br>
-				<button class="btn rounded-0" style="background-color: #1daccb; color: white">Send Us Now
+				<button type="submit" class="btn rounded-0" style="background-color: #1daccb; color: white">Send Us Now
 				</button></div>
 	 		</div></form><br>
 	 	</div>
@@ -112,12 +113,20 @@
 	 				<p>Get Latest News & Updates </p>
 	 			</div>
 				<div class="col-md-6">
+					<form action="{% url 'Subscribe'%}" method="POST">
+						{% csrf_token %}
+						
 					<div class="input-group mb-3 rounded-0 border-0">
-  						<input type="text" class="form-control" placeholder="Email Address" aria-describedby="button-addon2">
+						
+  						<input name="ema" type="email" class="form-control" placeholder="Email Address" aria-describedby="button-addon2">
   						<div class="input-group-append">
-    						<button class="btn rounded-0 hv"  type="button" id="button-addon2">Get Subscribed</button>
-  						</div>
+    						<button class="btn rounded-0 hv"  type="submit" id="button-addon2">Get Subscribed</button>
+						
+						</div>
+						
 					</div>
+					<div style="color: green;"><b>{{us}}</b></div>
+					</form>
 	 			</div>
 	 		</div>
 	 	</div>

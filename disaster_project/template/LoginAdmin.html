@@ -1,0 +1,43 @@
+{% extends 'Dashboard.html' %}
+{% block content %}
+{% load static %}
+<div class="row bg-dark pt-2 text-white">
+    <div class="col-md-12 text-right">
+        <p class="pr-4"><a class="home" href="{% url 'Home'%}">Homepage</a> &nbsp;> &nbsp;
+        <b>Log in/Register</b></p>
+    </div>		
+</div>
+</div>
+<div class="container pt-2 text-center"><h2>Log in </h2></div> <hr>
+<div class="container-fluid">
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-12">
+            <form action="" method="POST" >
+                {% csrf_token %}
+                
+                
+                <div class="div-1 d-flex justify-content-center">
+                    <label for="edit-name"><b>E-mail address: </b></label>
+                    <input type="text" id="edit-name" name="username" value=""  maxlength="60" class="form-text required" />
+                    
+                </div>
+                <br>
+                <div class="div-1 d-flex justify-content-center" >
+                     <label for="edit-pass"><b>Password:</b></label>
+                     <input type="password" id="edit-pass" name="password" maxlength="128" class="form-text required" />
+                </div>
+                
+
+                <div class="pt-2">
+                    <button type="submit" name="b" class="btn btn-info"style="background:#1daccb ;margin: 2px;"> Login <i class="icofont-login"></i></button>&nbsp; &nbsp; &nbsp;
+                    <a href="{% url 'Forgot'%}" style="color: #1daccb">Forgot Password?</a>
+                </div>
+                
+            </form>
+        
+        </div>
+        </div>
+        </div>
+        </div>
+        {% endblock %}

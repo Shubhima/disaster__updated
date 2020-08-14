@@ -1,0 +1,67 @@
+{% extends 'Base.html' %}
+{% block content %}
+{% load static %}
+<div class="content-inner ">
+    <!-- Page Header-->
+   
+        <div class="container-fluid pt-4">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 " >
+                    <h1 class="text-center" style="text-shadow: 10px 20px 5px #ccc; font-size: 50px;color:#1daccb;">
+                        Earthquake
+                    </h1>
+                </div>
+                <div class="col-md-2"></div>
+            </div><br>
+            <div class="col-md-12">
+                <form action="" method="POST">
+                    {% csrf_token %}
+               <div class="div-1 d-flex justify-content-center"> 
+                   <label class="heading-text mr-4" style="font-family: Sofia; font-size: 40px;color:black;">Enter date:</label>
+                <input class="" type="date" placeholder="   Date" name="txt1" style="height: 40px;width: 172px;
+                margin-top: 10px;border-style: solid; border-radius: 20px;border-color: #1daccb; font-size: 20px;"/> </div>
+                
+                 <div class="div-1 d-flex justify-content-center"> 
+                    <label class="heading-text mr-4" style="font-family: Sofia; font-size: 40px;color:black;">Enter longitude:</label>
+                 <input class="" type="number" placeholder="   Longitude" name="txt3" style="height: 40px;width: 130px;
+                 margin-top: 10px;border-style: solid; border-radius: 20px;border-color: #1daccb; font-size: 20px;"/> </div>
+                 <div class="div-1 d-flex justify-content-center"> 
+                    <label class="heading-text mr-4" style="font-family: Sofia; font-size: 40px;color:black;">Enter latitude:</label>
+                 <input class="" type="number" placeholder="   Latitude" name="txt4" style="height: 40px; width: 120px;
+                 margin-top: 10px;border-style: solid; border-radius: 20px;border-color: #1daccb; font-size: 20px;"/> </div>
+                 <div class="div-1 d-flex justify-content-center" >
+                    <button type="submit" value="Post" name="btn" style="height: 45px;margin-top: 10px;border-style: solid; border-radius: 20px;background-color:#1daccb;color:#fff"class="btn rounded-pill" > &nbsp;&nbsp;&nbsp;Enter &nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                        </form>
+                    </div>
+
+                    <div class=" col-md-12 heading-text mr-4" style="font-family: Sofia; font-size:40px;color:black;">
+                        Description:      
+                     </div>
+                     <div class="col-md-12">
+                         <p align=justify>
+                             Earthquake prediction is a branch of the science of seismology concerned with the specification
+                              of the time, location, and magnitude of future earthquakes within stated limits, and 
+                              particularly "the determination of parameters for the next strong earthquake to occur in a region.
+                           </p>
+                           <p align=justify>
+                             Earthquake prediction is sometimes distinguished from earthquake forecasting, which can be defined 
+                             as the probabilistic assessment of general earthquake hazard, including the frequency and magnitude
+                              of damaging earthquakes in a given area over years or decades.
+                             </p>
+                              <p align=justify>As the purpose of short-term prediction is to enable emergency measures to reduce
+                                   death and destruction, failure to give warning of a major earthquake, that does occur, or at 
+                                   least an adequate evaluation of the hazard, can result in legal liability, or even political 
+                                   purging.</p>
+                         </div>
+                     <div class="col-md-12 mr-4" style="font-size:20px;">
+                         You can download dataset from here: 
+                         <a href="{%static 'database.csv'%}" class="homee" style="font-size:23px;"> Dataset <i class="icofont-download"></i></a>
+                     </div>
+             </div>
+       
+     </div>
+
+     
+     {% endblock %}          
